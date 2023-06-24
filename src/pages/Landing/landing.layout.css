@@ -1,0 +1,15 @@
+.homefeed-container {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+}
+
+.middle-pane-container {
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.post-container{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

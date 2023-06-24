@@ -1,0 +1,26 @@
+.right-sidebar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  height: 90vh;
+}
+.right-sidebar-container .dropdown {
+  align-self: flex-start;
+  background: #ccc5c5;
+  width: max-content;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.right-sidebar-container select {
+  border: none;
+  outline: none;
+  background: #ccc5c5;
+  width: 100%;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
