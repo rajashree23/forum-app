@@ -81,41 +81,42 @@ export const PostCard = ({ post, detail }) => {
         </div>
 
         {detail &&
-        post.comments.map((comment) => (
-          <div key={comment.commentId} className="comment-container">
-            <div className="profile-pic-container">
-              <img src={comment.picUrl} alt={comment.username} />
-            </div>
-            <div className="comment-details">
-              <div className="comment-user">
-                <p className="name">{comment.name}</p>
-                <p className="comment-username">{comment.username}</p>
-                <p className="time">{calculateTime(comment)}m</p>
+          post.comments.map((comment) => (
+            <div key={comment.commentId} className="comment-container">
+              <div className="profile-pic-container">
+                <img src={comment.picUrl} alt={comment.username} />
               </div>
-              <p className="replyingto">Replying to <span>{`@${post.username}`}</span></p>
-              <p>{comment.comment}</p>
-              <div className="post-content-icons">
-          <FontAwesomeIcon
-            icon={faComment}
-            className="icon"
-            onClick={() => {
-              navigate(`/post/${post.postId}`);
-            }}
-          />
-          <FontAwesomeIcon icon={faShare} />
-          <FontAwesomeIcon
-            className="icon"
-            icon={faBookmark}
-            onClick={() =>
-              dispatch({ type: "SET_BOOKMARK", payload: post.postId })
-            }
-            style={isBookmarked ? { color: "#941894" } : null}
-          />
-        </div>
+              <div className="comment-details">
+                <div className="comment-user">
+                  <p className="name">{comment.name}</p>
+                  <p className="comment-username">{comment.username}</p>
+                  <p className="time">{calculateTime(comment)}m</p>
+                </div>
+                <p className="replyingto">
+                  Replying to <span>{`@${post.username}`}</span>
+                </p>
+                <p>{comment.comment}</p>
+                <div className="post-content-icons">
+                  <FontAwesomeIcon
+                    icon={faComment}
+                    className="icon"
+                    onClick={() => {
+                      navigate(`/post/${post.postId}`);
+                    }}
+                  />
+                  <FontAwesomeIcon icon={faShare} />
+                  <FontAwesomeIcon
+                    className="icon"
+                    icon={faBookmark}
+                    onClick={() =>
+                      dispatch({ type: "SET_BOOKMARK", payload: post.postId })
+                    }
+                    style={isBookmarked ? { color: "#941894" } : null}
+                  />
+                </div>
+              </div>
             </div>
-            
-          </div>
-        ))}
+          ))}
       </div>
     </div>
   );

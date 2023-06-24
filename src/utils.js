@@ -9,5 +9,5 @@ export const getVoteCount = (post) => {
   };
 
   export const calculateTime=(post)=>{
-    return new Date(new Date().getTime()- new Date(post.createdAt).getTime()).getMinutes();
+    return new Date(post.createdAt).getMinutes();
   }
