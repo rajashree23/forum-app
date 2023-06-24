@@ -1,14 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faComment,
-  faBookmark,
-  faShare,
-  faAngleUp,
-  faAngleDown,
-} from "@fortawesome/free-solid-svg-icons";
-
 import { useForumContext } from "../../context/ForumContext";
-import { calculateTime, getVoteCount } from "../../utils";
 import { useParams } from "react-router-dom";
 import { LeftSidebar } from "../../component/LeftSidebar/LeftSidebar";
 import "./postdetail.layout.css";
