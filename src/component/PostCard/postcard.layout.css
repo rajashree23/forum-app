@@ -34,12 +34,12 @@
   gap: 1rem;
 }
 
-.user-details .profile-pic-container {
+.profile-pic-container {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
-.user-details .profile-pic-container img {
+.profile-pic-container img {
   width: 100%;
 }
 
@@ -81,4 +81,40 @@
   justify-content: space-between;
   font-size: 1.5rem;
   color: #a167a1;
+}
+.comment-container{
+    display: flex;
+    gap: 1rem;;
+    border-bottom: 1px solid lightgray;
+    margin-top: 1rem;
+ 
+}
+.comment-user{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.comment-user .name{
+    font-weight: bold;
+}
+
+.comment-user .comment-username, .comment-user .time{
+    color: grey;
+    align-self: flex-start;
+
+}
+.comment-details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.replyingto{
+    color:grey;
+}
+.replyingto span{
+    color: #941894;
 }
