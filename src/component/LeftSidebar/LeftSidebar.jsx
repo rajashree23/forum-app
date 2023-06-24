@@ -8,6 +8,7 @@ import {
 
 import "./leftsidebar.layout.css";
 import { useForumContext } from "../../context/ForumContext";
+import { NavLink } from "react-router-dom";
 
 export const LeftSidebar = () => {
   const { posts } = useForumContext();
@@ -15,10 +16,11 @@ export const LeftSidebar = () => {
   return (
     <div className="sidebar-container">
       <div className="sidebar-menu">
-        <div className="menu-item">
+        <NavLink to="/" className="menu-item">
           <FontAwesomeIcon icon={faHouse} />
           <p>Home</p>
-        </div>
+        </NavLink>
+
         <div className="menu-item">
           <FontAwesomeIcon icon={faRocket} />
           <p>Explore</p>

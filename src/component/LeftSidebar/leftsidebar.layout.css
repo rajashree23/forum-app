@@ -28,6 +28,8 @@
   gap: 0.5rem;
   padding: 1rem;
   border-radius: 5px;
+  text-decoration: none;
+  color: black;
 }
 
 .sidebar-menu .menu-item:hover {
